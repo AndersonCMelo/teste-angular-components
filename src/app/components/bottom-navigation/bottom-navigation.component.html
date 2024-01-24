@@ -1,0 +1,28 @@
+<div class="container">
+
+  <spms-icon fontIcon="users" class="custom-icon" />
+
+  <div class="content">
+    <spms-bottom-navigation
+      [items]="myItems"
+      [selected]="1"
+      [showLabels]="false"
+      (onClick)="handleClick($event)"
+    />
+  </div>
+
+  <p>-----------------------------------------------------------</p>
+
+  <div class="content">
+    <spms-bottom-navigation
+      [items]="[
+        { label: 'home', icon: 'home' },
+        { label: 'users', icon: 'users' },
+        { label: 'reload', icon: 'reload' },
+      ]"
+      [selected]="0"
+      [showLabels]="true"
+      (onClick)="handleClick($event)"
+    />
+  </div>
+</div>

@@ -1,0 +1,146 @@
+<div class="container">
+  <h2>Letras</h2>
+
+  <div class="avatars">
+    <spms-avatar user="Design" />
+    <spms-avatar user="Design System" />
+    <spms-avatar user="Ministério da Saúde" />
+    <spms-avatar user="Serviços Partilhados do Ministério da Saúde" />
+  </div>
+
+  <h2>Cores</h2>
+
+  <div class="avatars">
+    <spms-avatar user="Design System" color="primary" />
+    <spms-avatar user="Ministério da Saúde" color="secondary" />
+    <spms-avatar user="Serviços Partilhados do Ministério da Saúde" color="info" />
+    <spms-avatar user="Design System" color="success" />
+    <spms-avatar user="Design System" color="warning" />
+    <spms-avatar user="Design System" color="error" />
+  </div>
+
+  <h2>Imagem</h2>
+
+  <div class="avatars">
+    <spms-avatar user="Design System" image="https://mui.com/static/images/avatar/1.jpg" />
+    <spms-avatar user="Ministério da Saúde" image="https://mui.com/static/images/avatar/2.jpg" />
+    <spms-avatar user="Serviços Partilhados do Ministério da Saúde" image="https://mui.com/static/images/avatar/3.jpg" />
+  </div>
+
+  <h2>Badges</h2>
+
+  <div class="avatars">
+    <spms-avatar
+      user="Serviços Partilhados do Ministério da Saúde"
+      [badge]="{ variant: 'dot' }"
+    />
+    <spms-avatar
+      user="Design System"
+      [badge]="{ label: '23' }"
+    />
+    <spms-avatar
+      user="Ministério da Saúde"
+      [badge]="{ label: '27', color: 'error' }"
+    />
+    <spms-avatar
+      user="Design System"
+      [badge]="{ image: 'https://mui.com/static/images/avatar/6.jpg' }"
+    />
+  </div>
+
+  <h2>Posicionamento de badges</h2>
+
+  <div class="avatars">
+    <spms-avatar
+      user="Design System"
+      [badge]="{
+        label: '23',
+        anchorOrigin: {
+          vertical: 'top',
+          horizontal: 'left',
+        },
+      }"
+    />
+    <spms-avatar
+      user="Serviços Partilhados do Ministério da Saúde"
+      [badge]="{
+        label: '19',
+        anchorOrigin: {
+          vertical: 'bottom',
+          horizontal: 'left',
+        },
+      }"
+    />
+    <spms-avatar
+      user="Ministério da Saúde"
+      [badge]="{
+        label: '27',
+        anchorOrigin: {
+          vertical: 'top',
+          horizontal: 'right',
+        },
+      }"
+    />
+    <spms-avatar
+      user="Avatar with Badge"
+      [badge]="{
+        label: '8',
+        anchorOrigin: {
+          vertical: 'bottom',
+          horizontal: 'right'
+        }
+      }"
+    />
+  </div>
+
+  <h2>Grupo</h2>
+
+  <spms-avatar
+    [max]="4"
+    [items]="[
+      {
+        user: 'Milo Stephens',
+        color: 'success',
+        badge: {
+          variant: 'dot',
+        },
+      },
+      {
+        user: 'Antony Mcintyre',
+        color: 'warning',
+        badge: {
+          variant: 'dot',
+        },
+      },
+      {
+        user: 'Aditya Garner',
+        color: 'error',
+        badge: {
+          variant: 'dot',
+        },
+      },
+      {
+        user: 'John Doe',
+        color: 'secondary',
+        badge: {
+          variant: 'dot',
+        },
+      },
+      {
+        user: 'Jerome Villarreal',
+        color: 'info',
+        badge: {
+          variant: 'dot',
+        },
+      },
+      {
+        user: 'Kezia Shelton',
+        color: 'primary',
+        badge: {
+          variant: 'dot',
+        },
+      },
+    ]"
+  />
+
+</div>

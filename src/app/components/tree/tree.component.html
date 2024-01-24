@@ -1,0 +1,9 @@
+<div class="flex flex-wrap mt-5 mb-5 justify-content-center">
+  <spms-button label="Expand all" (click)="expandAll()" style="margin-right: 10px;" />
+  <spms-button label="Send values" (click)="getValues()" />
+</div>
+
+<div class="container">
+  <spms-tree [items]="myItems" variant="checkbox" />
+</div>
+

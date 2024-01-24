@@ -1,0 +1,52 @@
+<h2>Size</h2>
+
+<div class="container">
+  <spms-switch [checked]="true" size="small" (onChange)="changeSwitch($event)" />
+  <spms-switch [checked]="false" size="medium" />
+  <spms-switch [checked]="true" size="large" />
+  <spms-switch [checked]="false" [disabled]="true" />
+</div>
+
+<h2>Colors</h2>
+
+<div class="container">
+  <spms-switch [checked]="true" color="primary" />
+  <spms-switch [checked]="true" color="secondary" />
+  <spms-switch [checked]="true" color="success" />
+  <spms-switch [checked]="true" color="warning" />
+  <spms-switch [checked]="true" color="error" />
+  <spms-switch [checked]="true" color="info" />
+  <spms-switch [checked]="true" color="#FFC107" />
+</div>
+
+<h2>Label</h2>
+
+<div class="container">
+  <spms-switch [checked]="true" label="Coimbra" />
+  <spms-switch [checked]="true" label="Braga" labelPosition="left" />
+</div>
+
+<h2>SPMS Icons</h2>
+
+<div class="container">
+  <spms-switch [checked]="false" size="small" [icon]="{ checked: { name: 'large-check', color: 'primary' }, unchecked: { name: 'large-close', color: 'red' } }" />
+  <spms-switch [checked]="false" size="medium" [icon]="{ checked: { name: 'large-check', color: 'primary' }, unchecked: { name: 'large-close', color: 'red' } }"  />
+  <spms-switch
+    [checked]="false"
+    size="large"
+    [icon]="{
+      checked: { name: 'large-check', color: '#0099CC' }, unchecked: { name: 'large-close', color: 'red' }
+    }"
+  />
+</div>
+
+<div class="container">
+  <spms-switch
+    [checked]="false"
+    [icon]="{ checked: { name: 'large-check', color: 'primary' }, unchecked: { name: 'large-close', color: 'red' } }"
+  />
+  <spms-switch
+    [checked]="true"
+    [icon]="{ checked: { name: 'large-check', color: 'primary' }, unchecked: { name: 'large-close', color: 'red' } }"
+  />
+</div>

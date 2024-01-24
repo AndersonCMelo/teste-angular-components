@@ -1,0 +1,18 @@
+spms-icon.custom-icon {
+  div {
+    fill: red !important;
+
+    svg path {
+      fill: red !important;
+    }
+  }
+}
+
+.custom-icon-container spms-icon {
+  color: red !important;
+  fill: red !important;
+}
+.custom-icon-container spms-icon div {
+  color: red !important;
+  fill: red !important;
+}

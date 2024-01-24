@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="button-container">
+    <spms-button (onClick)="getLeftValues()" label="Get left data" />
+    <spms-button (onClick)="getRightValues()" label="Get right data" />
+  </div>
+
+  <spms-transfer-list
+    [items]="myItems"
+    [selectedItems]="mySelectedItems"
+    [hasFilter]="true"
+    filterBy="id"
+  />
+</div>

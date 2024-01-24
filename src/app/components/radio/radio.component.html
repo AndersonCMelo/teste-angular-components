@@ -1,0 +1,61 @@
+<div class="container">
+  <spms-radio-button
+    [options]="[
+      { id: 'yes', name: 'option', value: 'true', label: 'Sim', },
+      { id: 'no', name: 'option', value: 'false', label: 'Não', checked: true },
+    ]"
+    (onChange)="changeRadio($event)"
+  />
+</div>
+
+<div class="container">
+  <spms-radio-button
+    [vertical]="false"
+    [options]="[
+      { id: 'opSmall', name: 'size', value: 'opSmall', size: 'small' },
+      { id: 'opMedium', name: 'size', value: 'opMedium', size: 'medium' },
+      { id: 'opLarge', name: 'size', value: 'opLarge', size: 'large', checked: true },
+      { id: 'opDisabled', name: 'size', value: 'opDisabled', disabled: true },
+    ]"
+  />
+</div>
+
+<h2>Colors</h2>
+
+<div class="container">
+  <spms-radio-button
+    [options]="[
+      { id: 'op1', name: 'option', value: 'option1', color: 'success', },
+      { id: 'op2', name: 'option', value: 'option2', color: 'info', },
+      { id: 'op3', name: 'option', value: 'option3', color: 'warning', },
+      { id: 'op4', name: 'option', value: 'option4', color: 'error', },
+      { id: 'op5', name: 'option', value: 'option5', color: 'yellow', },
+      { id: 'op6', name: 'option', value: 'option6', color: '#FF6687', },
+      { id: 'op7', name: 'option', value: 'option7', color: 'primary', },
+      { id: 'op8', name: 'option', value: 'option8', color: 'secondary', },
+    ]"
+    (onChange)="changeRadio($event)"
+  />
+</div>
+
+<h2>Label</h2>
+
+<div class="container">
+  <spms-radio-button
+    [options]="[
+      { id: 'op9', name: 'optionLabel', value: 'option9', label: 'Label example', },
+      { id: 'op10', name: 'optionLabel', value: 'option10', label: 'Label example', labelPosition: 'left' },
+    ]"
+  />
+</div>
+
+<!-- <form [formGroup]="form">
+  <spms-radio-button
+    formControlName="name"
+    [options]="[
+      { id: 'op9', name: 'optionLabel', value: 'option9', label: 'Label example', },
+      { id: 'op10', name: 'optionLabel', value: 'option10', label: 'Label example', labelPosition: 'left' },
+    ]"
+    (onChange)="changeRadio($event)"
+  />
+</form> -->

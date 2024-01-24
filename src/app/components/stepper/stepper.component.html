@@ -1,0 +1,12 @@
+<div class="container">
+  <spms-stepper
+    [steps]="steps"
+    [activeStep]="step"
+  />
+    <!-- [items]="items" -->
+
+  <div class="button-container">
+    <spms-button label="Back" [disabled]="step === 0" (onClick)="handleBack()" />
+    <spms-button label="{{ step === steps - 1 ? 'Finish' : 'Next' }}" [disabled]="step === steps" (onClick)="handleNext()" />
+  </div>
+</div>

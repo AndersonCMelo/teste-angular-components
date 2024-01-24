@@ -1,0 +1,81 @@
+<div class="container">
+  <spms-checkbox
+    [options]="[
+      { id: 'colors1', name: 'colors', value: 'colors1', size: 'medium', color: 'success', defaultChecked: true },
+      { id: 'colors2', name: 'colors', value: 'colors2', size: 'medium', color: 'warning', defaultChecked: true },
+      { id: 'colors3', name: 'colors', value: 'colors3', size: 'medium', color: 'error', },
+      { id: 'colors4', name: 'colors', value: 'colors4', size: 'medium', color: 'info', },
+      { id: 'colors5', name: 'colors', value: 'colors5', size: 'medium', color: 'primary', },
+      { id: 'colors6', name: 'colors', value: 'colors6', size: 'medium', color: 'secondary', },
+      { id: 'colors7', name: 'colors', value: 'colors7', size: 'medium', color: '#FFC107', },
+    ]"
+    (onChange)="handleChangeOptions($event)"
+  />
+
+  <h2>Básico</h2>
+
+  <div class="line basic-line">
+    <spms-checkbox
+      [options]="[
+        { id: 'basic1', name: 'basic1', value: 'basic1', size: 'medium', },
+        { id: 'basic2', name: 'basic2', value: 'basic2', size: 'medium', defaultChecked: true },
+        { id: 'basic3', name: 'basic3', value: 'basic3', size: 'medium', disabled: true },
+      ]"
+      [vertical]="true"
+      (onChange)="handleChange($event)"
+    />
+  </div>
+
+  <h2>Cores</h2>
+
+  <div class="line">
+    <spms-checkbox
+      [options]="[
+        { id: 'colors1', name: 'colors', value: 'colors1', size: 'medium', color: 'success', defaultChecked: true },
+        { id: 'colors2', name: 'colors', value: 'colors2', size: 'medium', color: 'warning', defaultChecked: true },
+        { id: 'colors3', name: 'colors', value: 'colors3', size: 'medium', color: 'error', },
+        { id: 'colors4', name: 'colors', value: 'colors4', size: 'medium', color: 'info', },
+        { id: 'colors5', name: 'colors', value: 'colors5', size: 'medium', color: 'primary', },
+        { id: 'colors6', name: 'colors', value: 'colors6', size: 'medium', color: 'secondary', },
+        { id: 'colors7', name: 'colors', value: 'colors7', size: 'medium', color: '#FFC107', },
+      ]"
+      (onChange)="handleChange($event)"
+    />
+  </div>
+
+  <h2>Labels</h2>
+
+  <div class="line">
+    <spms-checkbox
+      [options]="[
+        { id: 'label1', name: 'label', value: 'label1', size: 'medium', label: 'Lisboa', },
+        { id: 'label2', name: 'label', value: 'label2', size: 'medium', label: 'Porto', },
+        { id: 'label3', name: 'label', value: 'label3', size: 'medium', label: 'Braga', labelPosition: 'left' },
+      ]"
+    />
+  </div>
+
+  <h2>Tamanhos</h2>
+
+  <div class="line">
+    <spms-checkbox
+      [options]="[
+        { id: 'size1', name: 'size', value: 'size1', size: 'small', },
+        { id: 'size2', name: 'size', value: 'size2', size: 'medium', },
+        { id: 'size3', name: 'size', value: 'size3', size: 'large', },
+        { id: 'size4', name: 'size', value: 'size4', size: '100px', },
+      ]"
+    />
+  </div>
+
+  <h2>Acessibilidade</h2>
+
+  <div class="line">
+    <spms-checkbox
+      [options]="[
+        { id: 'acessubilidade1', name: 'acessubilidade', value: 'acessubilidade1', size: 'medium', ariaLabel: 'Aria label Example' },
+        { id: 'acessubilidade2', name: 'acessubilidade', value: 'acessubilidade2', size: 'medium', ariaLabelledBy: 'Aria labelledby Example' },
+      ]"
+    />
+  </div>
+</div>
