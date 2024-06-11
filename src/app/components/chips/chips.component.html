@@ -1,0 +1,79 @@
+<h2>Basic</h2>
+<spms-chips label="Chip" />
+<spms-chips label="Chip" variant="secondary" />
+
+<h2>Inactive</h2>
+<spms-chips label="Inativo" [disabled]="true" />
+<spms-chips label="Inativo" variant="secondary" [disabled]="true" />
+
+<h2>Colors</h2>
+<spms-chips color="primary" variant="primary" label="Primária" />
+<spms-chips color="secondary" variant="primary" label="Secundária" />
+<spms-chips color="success" variant="primary" label="Sucesso" />
+<spms-chips color="warning" variant="primary" label="Atenção" />
+<spms-chips color="danger" variant="primary" label="Erro" />
+<spms-chips color="informative" variant="primary" label="Informação" />
+
+<spms-chips color="primary" variant="secondary" label="Primária" />
+<spms-chips color="secondary" variant="secondary" label="Secundária" />
+<spms-chips color="success" variant="secondary" label="Sucesso" />
+<spms-chips color="warning" variant="secondary" label="Atenção" />
+<spms-chips color="danger" variant="secondary" label="Erro" />
+<spms-chips color="informative" variant="secondary" label="Informação" />
+
+<h2>Sizes</h2>
+<spms-chips size="medium" variant="primary" label="Padrão" />
+<spms-chips size="medium" variant="secondary" label="Padrão" />
+
+<spms-chips size="large" variant="primary" label="Grande" />
+<spms-chips size="large" variant="secondary" label="Grande" />
+
+<h2>Clickable</h2>
+<spms-chips variant="primary" label="Clicável" [clickable]="true" (onClick)="handleClick($event)" />
+<spms-chips variant="secondary" label="Clicável" [clickable]="true" (onClick)="handleClick($event)" />
+
+<!-- <spms-chips size="medium" variant="secondary" label="Clicável" [clickable]="true" href="https://www.google.com/" target="_blank" /> -->
+
+<h2>Avatar</h2>
+<div style="margin: 20px 0;">
+  <spms-chips variant="primary" label="Avatar Texto" avatar="Avatar" />
+  <spms-chips variant="primary" label="Avatar Texto" avatar="Design System" size="large" />
+</div>
+
+<div style="margin: 20px 0;">
+  <spms-chips
+    variant="primary"
+    label="Avatar Imagem URL"
+    avatar="https://mui.com/static/images/avatar/1.jpg"
+    size="medium"
+  />
+  <spms-chips
+    variant="primary"
+    label="Avatar Imagem URL"
+    avatar="https://mui.com/static/images/avatar/2.jpg"
+    size="large"
+  />
+
+</div>
+
+<div>
+  <spms-chips variant="primary" label="Avatar Ícone" icon="avatar" />
+  <spms-chips variant="primary" label="Avatar Ícone" icon="calendar" size="large" />
+</div>
+
+<h2>Deletable</h2>
+<spms-chips
+  size="medium"
+  icon="avatar"
+  label="Removível"
+  [removable]="true"
+  deleteIcon="small-close"
+/>
+<spms-chips
+  size="medium"
+  icon="avatar"
+  variant="secondary"
+  label="Removível"
+  [removable]="true"
+  deleteIcon="small-close"
+/>

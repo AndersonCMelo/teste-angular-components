@@ -1,0 +1,71 @@
+<div style="width: 500px;">
+
+  <spms-autocomplete
+    [options]="options"
+    label="Distrito"
+    icon="calendar"
+    state="default"
+    [multiple]="false"
+    [input]="{
+      placeholder: 'Selecionar distrito',
+      classes: 'input-class',
+    }"
+  />
+
+  <div style="margin: 20px;"></div>
+
+  <spms-autocomplete
+    [options]="options"
+    label="Distrito"
+    state="default"
+    [disabled]="true"
+    [input]="{
+      placeholder: 'Selecionar distrito',
+      classes: 'input-class',
+    }"
+  />
+
+  <div style="margin: 20px;"></div>
+
+  <spms-autocomplete
+    [options]="options"
+    label="Distrito"
+    state="success"
+    [input]="{
+      placeholder: 'Selecionar distrito',
+      classes: 'input-class',
+    }"
+    [hint]="{
+      active: true,
+      status: 'success',
+      icon: 'user',
+      color: 'success',
+      content: 'Mensagem de sucesso'
+    }"
+  />
+
+  <div style="margin: 20px;"></div>
+
+  <spms-autocomplete
+    [options]="options"
+    label="Distrito"
+    state="error"
+    [input]="{
+      placeholder: 'Selecionar distrito',
+      classes: 'input-class',
+    }"
+  />
+
+  <div style="margin: 20px;"></div>
+
+  <spms-autocomplete
+    [options]="options"
+    label="Distrito"
+    state="info"
+    [input]="{
+      placeholder: 'Selecionar distrito',
+      classes: 'input-class',
+    }"
+  />
+
+</div>

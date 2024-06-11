@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="button-container">
+  <div class="button-container" style="margin-bottom: 40px;">
     <spms-button (onClick)="getLeftValues()" label="Get left data" />
     <spms-button (onClick)="getRightValues()" label="Get right data" />
   </div>
@@ -7,7 +7,7 @@
   <spms-transfer-list
     [items]="myItems"
     [selectedItems]="mySelectedItems"
-    [hasFilter]="true"
+    [hasFilter]="false"
     filterBy="id"
   />
 </div>

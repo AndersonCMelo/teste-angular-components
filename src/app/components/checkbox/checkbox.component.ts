@@ -10,10 +10,10 @@ export class CheckboxComponent {
   checked: 'yes' | 'no' = 'no' // 'yes | 'no'
 
   handleChange(event: any) {
-    console.log('event', event)
+    console.log('handleChange', event)
   }
 
   handleChangeOptions(event: any) {
-    console.log('event', event)
+    console.log('handleChangeOptions', event)
   }
 }

@@ -6,9 +6,9 @@
     <spms-bottom-navigation
       [items]="myItems"
       [selected]="1"
-      [showLabels]="false"
-      (onClick)="handleClick($event)"
     />
+      <!-- [showLabels]="false" -->
+      <!-- (onClick)="handleClick($event)" -->
   </div>
 
   <p>-----------------------------------------------------------</p>
@@ -16,13 +16,14 @@
   <div class="content">
     <spms-bottom-navigation
       [items]="[
-        { label: 'home', icon: 'home' },
-        { label: 'users', icon: 'users' },
-        { label: 'reload', icon: 'reload' },
+        { label: 'home', icon: 'home', url: '/' },
+        { label: 'users', icon: 'users', url: '/' },
+        { label: 'reload', icon: 'reload', url: '/' },
       ]"
       [selected]="0"
-      [showLabels]="true"
-      (onClick)="handleClick($event)"
     />
+      <!-- (onClick)="handleClick($event)" -->
+      <!-- [showLabels]="true" -->
+      <!-- (onClick)="handleClick($event)" -->
   </div>
 </div>

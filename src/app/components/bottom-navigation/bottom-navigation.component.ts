@@ -13,9 +13,9 @@ interface eventProps {
 })
 export class BottomNavigationComponent {
   myItems = [
-    { id: '1', label: 'home', icon: 'home' },
-    { label: 'users', icon: 'users' },
-    { label: 'reload', icon: 'reload' },
+    { label: 'home', icon: 'home', url: '/' },
+    { label: 'users', icon: 'users', url: '/' },
+    { label: 'reload', icon: 'reload', url: '/' },
   ]
 
   handleClick(event: eventProps)  {

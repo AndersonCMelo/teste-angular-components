@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  handleClick() {
-    console.log('click')
+  handleClick(event: any) {
+    console.log('click event', event)
   }
 }

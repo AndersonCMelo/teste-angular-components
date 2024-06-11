@@ -1,0 +1,19 @@
+<p-tree
+  [value]="nodes"
+  [selectionMode]="selectionMode"
+  (selectionChange)="handleSelection($event)"
+  styleClass="{{isFocusSelected && 'focusSelected'}}"
+  [metaKeySelection]="metaKeySelection"
+  (onNodeExpand)="testNode($event)"
+>
+  <ng-template let-node pTemplate="default">
+    <div class="custom-icon-label">
+      <div class="icon">
+        <i class="pi {{ node.icon }}" *ngIf="node.icon && node.icon.substring(0, 3) === 'pi-'"></i>
+        <spms-icon fontIcon="{{ node.icon }}" size="small" *ngIf="node.icon && node.icon.substring(0, 3) !== 'pi-'" />
+      </div>
+
+      {{ node.label }}
+    </div>
+  </ng-template>
+</p-tree>

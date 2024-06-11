@@ -1,0 +1,87 @@
+<div class="main" style="margin-bottom: 30px;">
+  <h3>Reactive Form</h3>
+
+  <form [formGroup]="myForm" (ngSubmit)="ngSubmitReactive()">
+    <spms-text-input label="Name" placeholder="Texto exemplo" [isReactiveForm]="true" [formGroup]="myForm"
+      formControlName="name" [required]="true" [state]="stateName" hint="{{ hintNameMessage }}"
+      (onChange)="changeReactiveName($event)" />
+
+    <spms-text-input label="Email" placeholder="Texto exemplo" [isReactiveForm]="true" [formGroup]="myForm"
+      formControlName="email" [required]="true" [state]="stateEmail" hint="{{ hintEmailMessage }}"
+      (onChange)="changeReactiveEmail($event)" />
+
+    <div style="margin-top: 10px;">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<div class="main">
+  <spms-button text="Clear button" (onClick)="handleClick()" />
+
+  <spms-text-input label="My input" value="{{ inputValue }}" (onChange)="changeInput($event)" />
+
+  <div style="margin-top: 80px;"></div>
+
+  <h3>default</h3>
+
+  <div class="input-container">
+    <spms-text-input label="Pronto para inserir" placeholder="Texto exemplo" (onChange)="change($event)" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Ativo / Focus" value="{{ inputValue }}" (onChange)="change($event)" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Somente Leitura" state="read-only" value="Valor" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Desabilitado" state="disabled" value="Valor" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Sucesso" state="success" value="Valor" hint="Mensagem de sucesso" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Erro" state="error" value="Valor" hint="Mensagem de erro" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Informação" state="info" value="Valor" hint="Mensagem de info" />
+  </div>
+
+  <h3>password</h3>
+
+  <div class="input-container">
+    <spms-text-input label="Pronto para inserir" placeholder="Texto exemplo" variant="password" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Ativo / Focus" value="Password" variant="password" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Ativo / Focus" value="Password" variant="password" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Em conflito" value="Valor" variant="password" append="{{ append }}" />
+  </div>
+
+  <h3>prepend-append</h3>
+
+  <div class="input-container">
+    <spms-text-input label="Anexo anterior" prepend="{{ prepend }}" value="Valor" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Anexo posterior" append="{{ append }}" value="Valor" />
+  </div>
+
+  <div class="input-container">
+    <spms-text-input label="Ambos os anexos" append="{{ append }}" prepend="{{ prepend }}" value="Valor" />
+  </div>
+</div>

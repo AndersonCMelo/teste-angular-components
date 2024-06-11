@@ -6,7 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./switch.component.scss']
 })
 export class SwitchComponent {
+  data = {
+    estado: false
+  }
+
+  onEstadoChange(event: boolean) {
+    if (event === true) {
+      this.data.estado = true
+    } else {
+      this.data.estado = false
+    }
+  }
+
   changeSwitch(event: boolean) {
     console.log(event)
   }
+
+  handleConfig() {}
+
+  handleLogout() {}
 }

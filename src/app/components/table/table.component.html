@@ -1,0 +1,13 @@
+<spms-table
+  [columns]="columns"
+  [rows]="rows"
+  [checkboxSelection]="true"
+  [expansible]="true"
+  [editColumn]="true"
+  [deleteColumn]="true"
+  [options]="options"
+  (editRow)="onEdit($event)"
+  (deleteRow)="onDelete($event)"
+  (selectedRows)="onSelect($event)"
+  (changePage)="onSelect($event)"
+/>

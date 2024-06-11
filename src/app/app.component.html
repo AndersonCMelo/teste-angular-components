@@ -1,212 +1,79 @@
-<spms-template>
-  <template-menu>
-    <spms-menu
-      [options]="{
-        opened: true,
-        link: '/',
-        logo: {
-          fontIcon: 'spms',
-          size: '150px',
-          color: 'primary',
-        },
-        smallLogo: {
-          fontIcon: 'spms-icon',
-          size: '50px',
-          color: 'primary',
-        },
-        ticket: {
-          title: 'Está com dúvidas?',
-          titleVariant: 'Ticket',
-          url: '',
-          icon: 'ticket-icon',
-          description: 'Crie o seu Ticket ou Pedido aqui',
-        },
-      }"
-      [items]="[
-        {
-          title: 'Início',
-          icon: 'home',
-          url: '/'
-        },
-        {
-          title: 'Administração',
-          icon: 'admin',
-          children: [
-            {
-              title: 'Criar Lista de Utentes',
-              icon: 'view-card',
-              url: '/Components/Tabs',
-            },
-            {
-              title: 'Equipas',
-              icon: 'view-card',
-              url: '/Components/Tabs',
-              children: [
-                {
-                  title: 'Equipa 1',
-                  icon: 'view-card',
-                  url: '/Icons',
-                },
-                {
-                  title: 'Equipa 2',
-                  icon: 'view-card',
-                  url: '/',
-                },
-              ],
-            },
-            {
-              title: 'Histórico de Transferências',
-              icon: 'view-card',
-              url: '/',
-            },
-          ]
-        },
-        {
-          title: 'Componentes',
-          icon: 'components',
-          children: [
-            {
-              title: 'Accordion',
-              icon: 'view-card',
-              url: '/accordion',
-            },
-            {
-              title: 'Avatar',
-              icon: 'view-card',
-              url: '/avatar',
-            },
-            {
-              title: 'Bottom navigation',
-              icon: 'view-card',
-              url: '/bottom-navigation',
-            },
-            {
-              title: 'Breadcrumb',
-              icon: 'view-card',
-              url: '/breadcrumb',
-            },
-            {
-              title: 'Button',
-              icon: 'view-card',
-              url: '/button',
-            },
-            {
-              title: 'Checkbox',
-              icon: 'view-card',
-              url: '/checkbox',
-            },
-            {
-              title: 'Pagination',
-              icon: 'view-card',
-              url: '/pagination',
-            },
-            {
-              title: 'Radio button',
-              icon: 'view-card',
-              url: '/radio-button',
-            },
-            {
-              title: 'Stepper',
-              icon: 'view-card',
-              url: '/stepper',
-            },
-            {
-              title: 'Switch',
-              icon: 'view-card',
-              url: '/switch',
-            },
-            {
-              title: 'Tabs',
-              icon: 'view-card',
-              url: '/tabs',
-            },
-            {
-              title: 'Transfer list',
-              icon: 'view-card',
-              url: '/transfer-list',
-            },
-            {
-              title: 'Tree',
-              icon: 'view-card',
-              url: '/tree',
-            },
-          ]
-        },
-        {
-          title: 'Identificação',
-          icon: 'identification',
-          url: '/'
-        },
-      ]"
-    />
-  </template-menu>
+<div class="container">
+  <spms-template>
+    <template-menu>
+      <spms-menu
+        [options]="menuOptions"
+        [items]="menuItems"
+      />
+    </template-menu>
 
-  <template-header>
-    <spms-header
-      variant="simple"
-      username="Anderson Melo"
-      profilePicture="https://i.imgur.com/Eve2bjh.jpg"
-      primaryActionIcon="search"
-      secondaryActionIcon="definitions"
-      [notification]="5"
-      [options]="{
-        title: 'Meus alertas',
-        notifications: [
+    <template-header>
+      <spms-header
+        variant="simple"
+        username="Anderson Melo"
+        profilePicture="https://i.imgur.com/Eve2bjh.jpg"
+        primaryActionIcon="search"
+        secondaryActionIcon="definitions"
+        [notification]="5"
+        [options]="{
+          title: 'Meus alertas',
+          notifications: [
+            {
+              label: 'Notificações',
+              content: [
+                { date: 'Há 1 hora', title: 'Notificação 1', icon: 'document' },
+                { date: 'Há 1 hora', title: 'Notificação 2', icon: 'new-request' },
+              ]
+            },
+            {
+              label: 'Alertas',
+              content: [
+                { date: 'Há 1 hora', title: 'Alerta 1', icon: 'alert' },
+                { date: 'Há 1 hora', title: 'Alerta 2', icon: 'information' },
+              ]
+            },
+          ],
+          paths: {
+            openAllNotifications: '/notifications',
+            personalData: '/personal-data',
+            webAccessibility: '/acessibility'
+          }
+        }"
+        (configClick)="handleConfig()"
+        (logoutClick)="handleLogout()"
+      />
+    </template-header>
+
+    <template-content>
+      <div style="display: flex; flex-direction: column; padding: 20px; width: 100%;">
+        <router-outlet></router-outlet>
+        <!-- <app-home /> -->
+      </div>
+    </template-content>
+
+    <template-footer>
+      <spms-footer
+        footerText="Powered by SPMS"
+        [spmsLogo]="false"
+        copyrightText="Todos os direitos reservados ao Governo da República Portuguesa - Ministério da Saúde"
+        [logos]="[
           {
-            label: 'Notificações',
-            content: [
-              { date: 'Há 1 hora', title: 'Notificação 1', icon: 'document' },
-              { date: 'Há 1 hora', title: 'Notificação 2', icon: 'new-request' },
-            ]
+            icon: 'spms',
+            color: 'primary',
+            size: '80px'
           },
           {
-            label: 'Alertas',
-            content: [
-              { date: 'Há 1 hora', title: 'Alerta 1', icon: 'alert' },
-              { date: 'Há 1 hora', title: 'Alerta 2', icon: 'information' },
-            ]
+            icon: 'sns',
+            color: 'primary',
+            size: '60px'
           },
-        ],
-        paths: {
-          openAllNotifications: '/notifications',
-          personalData: '/personal-data',
-          webAccessibility: '/acessibility'
-        }
-      }"
-      (configClick)="handleConfig()"
-      (logoutClick)="handleLogout()"
-    />
-  </template-header>
-
-  <template-content>
-    <div style="display: flex; flex-direction: column; padding: 20px; width: 100%;">
-      <router-outlet></router-outlet>
-      <!-- <app-home /> -->
-    </div>
-  </template-content>
-
-  <template-footer>
-    <spms-footer
-      footerText="Powered by SPMS"
-      [spmsLogo]="false"
-      copyrightText="Todos os direitos reservados ao Governo da República Portuguesa - Ministério da Saúde"
-      [logos]="[
-        {
-          icon: 'spms',
-          color: 'primary',
-          size: '80px'
-        },
-        {
-          icon: 'sns',
-          color: 'primary',
-          size: '60px'
-        },
-        {
-          icon: 'republica-portuguesa-colors',
-          color: 'primary',
-          size: '60px'
-        },
-      ]"
-    />
-  </template-footer>
-</spms-template>
+          {
+            icon: 'republica-portuguesa-colors',
+            color: 'primary',
+            size: '60px'
+          },
+        ]"
+      />
+    </template-footer>
+  </spms-template>
+</div>

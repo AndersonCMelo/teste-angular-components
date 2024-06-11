@@ -24,6 +24,11 @@ import { BottomNavigationComponent } from './components/bottom-navigation/bottom
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { StepperComponent } from './components/stepper/stepper.component';
+import { TableComponent } from './components/table/table.component';
+import { TextInputComponent } from './components/text-input/text-input.component';
+import { DividerComponent } from './components/divider/divider.component';
+import { ChipsComponent } from './components/chips/chips.component';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,12 @@ import { StepperComponent } from './components/stepper/stepper.component';
     BottomNavigationComponent,
     BreadcrumbComponent,
     PaginationComponent,
-    StepperComponent
+    StepperComponent,
+    TableComponent,
+    TextInputComponent,
+    DividerComponent,
+    ChipsComponent,
+    AutocompleteComponent
   ],
   imports: [
     AppRoutingModule,

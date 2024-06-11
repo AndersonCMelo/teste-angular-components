@@ -13,10 +13,10 @@
   <div class="avatars">
     <spms-avatar user="Design System" color="primary" />
     <spms-avatar user="Ministério da Saúde" color="secondary" />
-    <spms-avatar user="Serviços Partilhados do Ministério da Saúde" color="info" />
+    <spms-avatar user="Serviços Partilhados do Ministério da Saúde" color="informative" />
     <spms-avatar user="Design System" color="success" />
     <spms-avatar user="Design System" color="warning" />
-    <spms-avatar user="Design System" color="error" />
+    <spms-avatar user="Design System" color="danger" />
   </div>
 
   <h2>Imagem</h2>
@@ -40,7 +40,7 @@
     />
     <spms-avatar
       user="Ministério da Saúde"
-      [badge]="{ label: '27', color: 'error' }"
+      [badge]="{ label: '27', color: 'danger' }"
     />
     <spms-avatar
       user="Design System"
@@ -69,6 +69,7 @@
           vertical: 'bottom',
           horizontal: 'left',
         },
+        color: 'success',
       }"
     />
     <spms-avatar
@@ -88,7 +89,8 @@
         anchorOrigin: {
           vertical: 'bottom',
           horizontal: 'right'
-        }
+        },
+        color: 'warning',
       }"
     />
   </div>
